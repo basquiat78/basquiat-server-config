@@ -1,0 +1,22 @@
+message: Welcome to Configuration Server
+
+---
+
+spring:
+  profiles: dev
+  app: basquiatDev
+message: Welcom to basquiatDev
+
+---
+
+spring:
+  profiles: stage
+  app: basquiatStage
+message: Welcom to basquiatStage
+
+---
+
+spring:
+  profiles: prod
+  app: basquiatProd
+message: Welcom to basquiatProd
