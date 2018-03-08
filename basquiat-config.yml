@@ -7,6 +7,13 @@ spring:
   app: basquiatDev
 message: Welcom to basquiatDev
 
+couchbase:
+  bucket:
+    name: basquiat
+    password: basquiat
+    ip: localhost
+    expiry: 0
+
 ---
 
 spring:
@@ -14,9 +21,22 @@ spring:
   app: basquiatStage
 message: Welcom to basquiatStage
 
+couchbase:
+  bucket:
+    name: basquiat
+    password: basquiat
+    ip: stage-id
+    expiry: 0
 ---
 
 spring:
   profiles: prod
   app: basquiatProd
 message: Welcom to basquiatProd
+
+couchbase:
+  bucket:
+    name: basquiat
+    password: basquiat
+    ip: prod-id
+    expiry: 0
