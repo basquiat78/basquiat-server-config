@@ -14,6 +14,10 @@ couchbase:
     ip: localhost
     expiry: 0
 
+redis:
+  host: localhost
+  port: 6379
+
 ---
 
 spring:
@@ -23,10 +27,14 @@ message: Welcom to basquiatStage
 
 couchbase:
   bucket:
-    name: basquiat
-    password: basquiat
-    ip: stage-id
-    expiry: 0
+    name: <<stage-bucket-name>>
+    ip: <<stage-bucket-ip>>
+    password: <<stage-bucket-password>>
+    expiry: <<yoursExpiry>>
+    
+redis:
+  host: <<stage-redis-host>>
+  port: <<stage-redis-port>>
 ---
 
 spring:
@@ -36,7 +44,11 @@ message: Welcom to basquiatProd
 
 couchbase:
   bucket:
-    name: basquiat
-    password: basquiat
-    ip: prod-id
-    expiry: 0
+    name: <<prod-bucket-name>>
+    ip: <<prod-bucket-ip>>
+    password: <<prod-bucket-password>>
+    expiry: <<yoursExpiry>>
+    
+redis:
+  host: <<prod-redis-host>>
+  port: <<prod-redis-port>>
